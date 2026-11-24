@@ -1,0 +1,6 @@
+.git
+models
+docs
+reports
+tests
+**/__pycache__
