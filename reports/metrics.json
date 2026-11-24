@@ -1,0 +1,334 @@
+{
+  "version": "0.1.0",
+  "trained_at": "2026-11-24T10:46:54+00:00",
+  "data": {
+    "n_train": 700,
+    "n_test": 300,
+    "default_rate": 0.3
+  },
+  "baselines_test": {
+    "approve_everyone": 1.5,
+    "reject_everyone": 0.7
+  },
+  "metrics_test": {
+    "scorecard": {
+      "cv_auc": 0.7624198250728863,
+      "auc": 0.7846560846560846,
+      "gini": 0.5693121693121692,
+      "ks": 0.4619047619047619,
+      "brier": 0.16389699570666855,
+      "threshold": 0.19999999999999998,
+      "approval_rate": 0.44666666666666666,
+      "bad_rate_among_approved": 0.11194029850746269,
+      "expected_cost": 0.5533333333333333
+    },
+    "gbm": {
+      "cv_auc": 0.7664237123420796,
+      "auc": 0.777883597883598,
+      "gini": 0.5557671957671959,
+      "ks": 0.43492063492063493,
+      "brier": 0.16923666833652773,
+      "threshold": 0.13999999999999999,
+      "approval_rate": 0.3466666666666667,
+      "bad_rate_among_approved": 0.08653846153846154,
+      "expected_cost": 0.5333333333333333
+    },
+    "scorecard_reweighed": {
+      "cv_auc": 0.7603109815354714,
+      "auc": 0.7852910052910053,
+      "gini": 0.5705820105820105,
+      "ks": 0.4746031746031746,
+      "brier": 0.16380060291343204,
+      "threshold": 0.155,
+      "approval_rate": 0.39,
+      "bad_rate_among_approved": 0.1111111111111111,
+      "expected_cost": 0.57
+    }
+  },
+  "thresholds": {
+    "scorecard": 0.19999999999999998,
+    "gbm": 0.13999999999999999,
+    "scorecard_reweighed": 0.155
+  },
+  "fairness_test": {
+    "scorecard": {
+      "sex": {
+        "groups": {
+          "female": {
+            "n": 101.0,
+            "actual_default_rate": 0.3465346534653465,
+            "mean_predicted_pd": 0.3082147098798252,
+            "approval_rate": 0.4158415841584158,
+            "approval_rate_if_good": 0.5606060606060606
+          },
+          "male": {
+            "n": 199.0,
+            "actual_default_rate": 0.27638190954773867,
+            "mean_predicted_pd": 0.28869093116702255,
+            "approval_rate": 0.4623115577889447,
+            "approval_rate_if_good": 0.5694444444444444
+          }
+        },
+        "disparities": {
+          "disparate_impact_ratio": {
+            "estimate": 0.8994834266035299,
+            "ci_low": 0.7376896955554969,
+            "ci_high": 0.9863826203781226
+          },
+          "approval_rate_gap": {
+            "estimate": 0.046469973630528905,
+            "ci_low": 0.00641447070526346,
+            "ci_high": 0.13485319433822135
+          },
+          "equal_opportunity_gap": {
+            "estimate": 0.008838383838383868,
+            "ci_low": 0.0015271354241942624,
+            "ci_high": 0.11731169871794865
+          },
+          "calibration_gap": {
+            "estimate": 0.03831994358552132,
+            "ci_low": 0.012856509353903867,
+            "ci_high": 0.11576233637298942
+          }
+        }
+      },
+      "age_group": {
+        "groups": {
+          "25 and over": {
+            "n": 241.0,
+            "actual_default_rate": 0.2572614107883817,
+            "mean_predicted_pd": 0.2898923056013896,
+            "approval_rate": 0.46473029045643155,
+            "approval_rate_if_good": 0.5754189944134078
+          },
+          "under 25": {
+            "n": 59.0,
+            "actual_default_rate": 0.4745762711864407,
+            "mean_predicted_pd": 0.31720568390110054,
+            "approval_rate": 0.3728813559322034,
+            "approval_rate_if_good": 0.5161290322580645
+          }
+        },
+        "disparities": {
+          "disparate_impact_ratio": {
+            "estimate": 0.802360774818402,
+            "ci_low": 0.6116846812427802,
+            "ci_high": 0.989571800380071
+          },
+          "approval_rate_gap": {
+            "estimate": 0.09184893452422815,
+            "ci_low": 0.005117933024240926,
+            "ci_high": 0.1941698777207054
+          },
+          "equal_opportunity_gap": {
+            "estimate": 0.05928996215534332,
+            "ci_low": 0.003952424153343489,
+            "ci_high": 0.20597411406423038
+          },
+          "calibration_gap": {
+            "estimate": 0.15737058728534015,
+            "ci_low": 0.0690774383996613,
+            "ci_high": 0.275682169219463
+          }
+        }
+      }
+    },
+    "gbm": {
+      "sex": {
+        "groups": {
+          "female": {
+            "n": 101.0,
+            "actual_default_rate": 0.3465346534653465,
+            "mean_predicted_pd": 0.29976984492014846,
+            "approval_rate": 0.3465346534653465,
+            "approval_rate_if_good": 0.4696969696969697
+          },
+          "male": {
+            "n": 199.0,
+            "actual_default_rate": 0.27638190954773867,
+            "mean_predicted_pd": 0.286450486825479,
+            "approval_rate": 0.34673366834170855,
+            "approval_rate_if_good": 0.4444444444444444
+          }
+        },
+        "disparities": {
+          "disparate_impact_ratio": {
+            "estimate": 0.9994260295594776,
+            "ci_low": 0.747217701995189,
+            "ci_high": 0.9900318604941893
+          },
+          "approval_rate_gap": {
+            "estimate": 0.00019901487636203585,
+            "ci_low": 0.0035079147411322107,
+            "ci_high": 0.10698361268217364
+          },
+          "equal_opportunity_gap": {
+            "estimate": 0.025252525252525304,
+            "ci_low": 0.010104270633650738,
+            "ci_high": 0.15441938086854456
+          },
+          "calibration_gap": {
+            "estimate": 0.046764808545198044,
+            "ci_low": 0.010712423657989741,
+            "ci_high": 0.13588615058918813
+          }
+        }
+      },
+      "age_group": {
+        "groups": {
+          "25 and over": {
+            "n": 241.0,
+            "actual_default_rate": 0.2572614107883817,
+            "mean_predicted_pd": 0.28433418383959747,
+            "approval_rate": 0.3651452282157676,
+            "approval_rate_if_good": 0.4581005586592179
+          },
+          "under 25": {
+            "n": 59.0,
+            "actual_default_rate": 0.4745762711864407,
+            "mean_predicted_pd": 0.31789598152309057,
+            "approval_rate": 0.2711864406779661,
+            "approval_rate_if_good": 0.41935483870967744
+          }
+        },
+        "disparities": {
+          "disparate_impact_ratio": {
+            "estimate": 0.7426810477657936,
+            "ci_low": 0.5318458327742703,
+            "ci_high": 0.9925029881197627
+          },
+          "approval_rate_gap": {
+            "estimate": 0.09395878753780151,
+            "ci_low": 0.002618620783811965,
+            "ci_high": 0.1780751421839004
+          },
+          "equal_opportunity_gap": {
+            "estimate": 0.03874571994954046,
+            "ci_low": 0.008846632078155147,
+            "ci_high": 0.21021402391527516
+          },
+          "calibration_gap": {
+            "estimate": 0.15668028966335013,
+            "ci_low": 0.06532512856437911,
+            "ci_high": 0.2682043860776197
+          }
+        }
+      }
+    },
+    "scorecard_reweighed": {
+      "sex": {
+        "groups": {
+          "female": {
+            "n": 101.0,
+            "actual_default_rate": 0.3465346534653465,
+            "mean_predicted_pd": 0.30442190576844813,
+            "approval_rate": 0.36633663366336633,
+            "approval_rate_if_good": 0.5
+          },
+          "male": {
+            "n": 199.0,
+            "actual_default_rate": 0.27638190954773867,
+            "mean_predicted_pd": 0.28946326401460015,
+            "approval_rate": 0.4020100502512563,
+            "approval_rate_if_good": 0.4930555555555556
+          }
+        },
+        "disparities": {
+          "disparate_impact_ratio": {
+            "estimate": 0.9112623762376237,
+            "ci_low": 0.7472326269174456,
+            "ci_high": 0.9889760341595203
+          },
+          "approval_rate_gap": {
+            "estimate": 0.03567341658788997,
+            "ci_low": 0.004330649862501169,
+            "ci_high": 0.1120330792323986
+          },
+          "equal_opportunity_gap": {
+            "estimate": 0.00694444444444442,
+            "ci_low": 0.0022223180637210875,
+            "ci_high": 0.14222664281744926
+          },
+          "calibration_gap": {
+            "estimate": 0.04211274769689838,
+            "ci_low": 0.01525009940625283,
+            "ci_high": 0.11903627700754453
+          }
+        }
+      },
+      "age_group": {
+        "groups": {
+          "25 and over": {
+            "n": 241.0,
+            "actual_default_rate": 0.2572614107883817,
+            "mean_predicted_pd": 0.2908916490400113,
+            "approval_rate": 0.3983402489626556,
+            "approval_rate_if_good": 0.49162011173184356
+          },
+          "under 25": {
+            "n": 59.0,
+            "actual_default_rate": 0.4745762711864407,
+            "mean_predicted_pd": 0.30923584072671145,
+            "approval_rate": 0.3559322033898305,
+            "approval_rate_if_good": 0.5161290322580645
+          }
+        },
+        "disparities": {
+          "disparate_impact_ratio": {
+            "estimate": 0.8935381355932204,
+            "ci_low": 0.6836757493464118,
+            "ci_high": 0.9984392088733309
+          },
+          "approval_rate_gap": {
+            "estimate": 0.04240804557282507,
+            "ci_low": 0.000580355051832482,
+            "ci_high": 0.14116283071736466
+          },
+          "equal_opportunity_gap": {
+            "estimate": 0.024508920526220945,
+            "ci_low": 0.006256735274817737,
+            "ci_high": 0.2366487068965517
+          },
+          "calibration_gap": {
+            "estimate": 0.16534043045972924,
+            "ci_low": 0.0769981761624064,
+            "ci_high": 0.28189058652593074
+          }
+        }
+      }
+    }
+  },
+  "information_values": {
+    "checking_status": 0.6342,
+    "credit_history": 0.2542,
+    "savings": 0.2232,
+    "duration_months": 0.202,
+    "employment_since": 0.1398,
+    "property": 0.1396,
+    "purpose": 0.1276,
+    "other_installment_plans": 0.1182,
+    "housing": 0.1033,
+    "credit_amount": 0.0664,
+    "installment_rate": 0.0328,
+    "job": 0.024,
+    "telephone": 0.0029,
+    "existing_credits": 0.0021,
+    "residence_since": 0.0021,
+    "other_debtors": 0.0005,
+    "num_dependents": 0.0
+  },
+  "scorecard_features": [
+    "checking_status",
+    "credit_history",
+    "savings",
+    "duration_months",
+    "employment_since",
+    "property",
+    "purpose",
+    "other_installment_plans",
+    "housing",
+    "credit_amount",
+    "installment_rate",
+    "job"
+  ]
+}

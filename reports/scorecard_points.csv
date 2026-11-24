@@ -1,0 +1,55 @@
+feature,bin,woe,bad_rate,count,points
+checking_status,0-200,-0.42,0.39,188,33.53
+checking_status,< 0,-0.76,0.48,192,25.88
+checking_status,>= 200,0.11,0.27,44,45.13
+checking_status,no account,1.17,0.12,276,68.57
+credit_history,all repaid at this bank,-1.05,0.55,38,23.57
+credit_history,critical account,0.69,0.18,205,55.27
+credit_history,existing repaid duly,-0.09,0.32,362,41.19
+credit_history,other,-1.12,0.57,28,22.27
+credit_history,past delays,-0.14,0.33,67,40.14
+savings,100-500,-0.11,0.32,81,40.06
+savings,500-1000,0.68,0.17,41,59.56
+savings,< 100,-0.3,0.37,417,35.23
+savings,>= 1000,0.93,0.14,37,65.77
+savings,unknown / none,0.84,0.15,124,63.58
+duration_months,"[-inf, 12)",0.89,0.15,129,65.87
+duration_months,"[12, 15)",0.19,0.26,135,47.78
+duration_months,"[15, 24)",-0.09,0.32,145,40.48
+duration_months,"[24, 30)",-0.13,0.33,141,39.41
+duration_months,"[30, inf)",-0.55,0.43,150,28.3
+employment_since,1-4 years,0.07,0.28,246,44.38
+employment_since,4-7 years,0.5,0.2,113,54.43
+employment_since,< 1 year,-0.58,0.43,120,29.19
+employment_since,>= 7 years,0.19,0.26,184,47.11
+employment_since,unemployed,-0.69,0.46,37,26.67
+property,car or other,-0.04,0.31,231,42.39
+property,real estate,0.46,0.21,199,46.99
+property,savings agreement / life insurance,0.05,0.29,159,43.15
+property,unknown / none,-0.69,0.46,111,36.44
+purpose,business,-0.23,0.35,69,37.07
+purpose,education,-0.9,0.51,35,20.32
+purpose,furniture,-0.12,0.33,126,39.65
+purpose,new car,-0.18,0.34,171,38.16
+purpose,other,-0.13,0.32,37,39.41
+purpose,radio/tv,0.38,0.23,186,52.09
+purpose,used car,0.53,0.2,76,55.92
+other_installment_plans,bank,-0.75,0.47,99,27.95
+other_installment_plans,none,0.17,0.26,563,46.16
+other_installment_plans,stores,-0.32,0.37,38,36.35
+housing,for free,-0.5,0.41,75,35.04
+housing,own,0.21,0.26,502,45.99
+housing,rent,-0.47,0.41,123,35.5
+credit_amount,"[-inf, 1248.2)",-0.07,0.31,140,41.66
+credit_amount,"[1248.2, 1919)",0.35,0.23,139,47.88
+credit_amount,"[1919, 2788.8)",0.0,0.3,141,42.79
+credit_amount,"[2788.8, 4738)",0.17,0.26,140,45.22
+credit_amount,"[4738, inf)",-0.42,0.39,140,36.62
+installment_rate,"[-inf, 2)",0.28,0.24,99,52.35
+installment_rate,"[2, 3)",0.2,0.26,167,49.8
+installment_rate,"[3, 4)",-0.11,0.32,112,39.03
+installment_rate,"[4, inf)",-0.15,0.33,322,37.5
+job,management / self-employed,-0.21,0.34,99,44.86
+job,other,-0.85,0.5,12,51.46
+job,skilled employee,0.04,0.29,449,42.36
+job,unskilled resident,0.1,0.28,140,41.75
